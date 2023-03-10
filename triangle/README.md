@@ -19,11 +19,30 @@ a + b > c && c + b > a && c + a > b
 
 **Se todos os lados possuem a mesma medida**
 
+```go
+
+ a == b && b == c && c == a
+
+```
+
+
 ### Isósceles
 **Se dois lados possuem a mesma medida**
 
+```go
+
+a == b || c == a || b == c
+
+```
+
 ### Escaleno
 **Se todos os lados possuem medidas diferentes**
+
+```go
+
+a != b && b != c && a != c
+
+```
 
 ## Tipos de testes
 
