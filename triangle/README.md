@@ -2,9 +2,12 @@
 
 ## **Triangulo**
 
+```bash
     A
   /    \ 
 B ----- C
+
+```
 
 ```go
 
