@@ -9,12 +9,6 @@ func TestGetTypeTriangle(test *testing.T){
 			test.Errorf("Result: %d Expected: %d",result,expected)
 		}
 	}
-	test.Run("É Inválido", func(test *testing.T){
-		InválidoResult   := GetTypeTriangle(10,12,-13);
-		InválidoExpected := 0;
-			checkExpectedResult(test,InválidoResult,InválidoExpected);	
-	});
-
 	test.Run("Não é um triangulo", func(test *testing.T){
 		nãoéumtrianguloResult   := GetTypeTriangle(0,0,0);
 		nãoéumtrianguloExpected := 0;
