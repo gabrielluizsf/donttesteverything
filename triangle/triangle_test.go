@@ -1,12 +1,14 @@
 package triangle
 
-import "testing";
+import (
+	"testing"
 
-func TestCheckIsTriangle(test *testing.T){
-	result   := CheckIsTriangle(10,12,13);
-	expected := true;
+	"github.com/gabrielluizsf/donttesteverything/assert"
+)
 
-	if result != expected{
-		test.Errorf("Result: %v  Expected: %v",result,expected);
-	}
+func TestCheckIsTriangle(test *testing.T) {
+	result := CheckIsTriangle(10, 12, 13)
+	expected := true
+	a := assert.New(test)
+	a.Equals(result, expected)
 }
