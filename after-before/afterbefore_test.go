@@ -1,30 +1,28 @@
 package afterbefore
 
-import "testing"
+import (
+	"testing"
 
-func TestDoubleNumber(test *testing.T){
-	result   :=   DoubleNumber(2);
-	expected :=	4;
+	"github.com/gabrielluizsf/donttesteverything/assert"
+)
 
-	if result != expected{
-		test.Errorf("Result: %d , Expected: %d",result, expected);
-	}
+func TestDoubleNumber(test *testing.T) {
+	result := DoubleNumber(2)
+	expected := 4
+	a := assert.New(test)
+	a.Equals(result, expected)
 }
 
-func TestIsNullOrEmpty(test *testing.T){
-	result   :=  IsNullOrEmpty("ahfjsaf");
-	expected := false;
-
-	if result != expected{
-		test.Errorf("Result: %t, Expected: %t", result, expected);
-	}
+func TestIsNullOrEmpty(test *testing.T) {
+	result := IsNullOrEmpty("ahfjsaf")
+	expected := false
+	a := assert.New(test)
+	a.Equals(result, expected)
 }
 
-func TestAdd(test *testing.T){
-	result   := Add(10,10);
-	expected := 20;
-
-	if result != expected{
-		test.Errorf("Result: %d, Expected: %d",result,expected)
-	}
+func TestAdd(test *testing.T) {
+	result := Add(10, 10)
+	expected := 20
+	a := assert.New(test)
+	a.Equals(result, expected)
 }
